@@ -1,0 +1,7 @@
+vscode環境要切到cmd
+
+conda activate ml        
+streamlit run predict_page.py 
+xgboost==1.4.2
+pandas=1.2.2
+
