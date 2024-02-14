@@ -28,7 +28,7 @@ import joblib
 # joblib.dump(model, 'model.pkl')
 
 # 加载模型
-data= joblib.load('model.pkl')
+data= joblib.load('Dementia_XGBModel_Packed_ver2.pkl')
 
 
 # def load_model():
