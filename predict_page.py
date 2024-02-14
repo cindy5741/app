@@ -16,19 +16,19 @@ import plotly.express as px
 
 import os
 
-# def load_model():
-#     filepath = os.path.abspath('Dementia_XGBModel_Packed_ver2.pkl')
-#     with open(filepath, 'rb') as file:
-#         data = pickle.load(file)
-#     return data
+def load_model():
+    filepath = os.path.abspath('Dementia_XGBModel_Packed_ver2.pkl')
+    with open(filepath, 'rb') as file:
+        data = pickle.load(file)
+    return data
 
-import joblib
+# import joblib
 
 # # 保存模型
 # joblib.dump(model, 'model.pkl')
 
 # 加载模型
-data= joblib.load('Dementia_XGBModel_Packed_ver2.pkl')
+# data= joblib.load('Dementia_XGBModel_Packed_ver2.pkl')
 
 
 # def load_model():
@@ -36,7 +36,7 @@ data= joblib.load('Dementia_XGBModel_Packed_ver2.pkl')
 #         data=pickle.load(file)
 #     return data
 
-# data=load_model()
+data=load_model()
 
 model=data['model']
 
