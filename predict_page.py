@@ -14,10 +14,20 @@ import plotly.figure_factory as ff
 import plotly.express as px
 
 
+import os
+
 def load_model():
-    with open('Dementia_XGBModel_Packed_ver2.pkl','rb') as file:
-        data=pickle.load(file)
+    filepath = os.path.abspath('Dementia_XGBModel_Packed_ver2.pkl')
+    with open(filepath, 'rb') as file:
+        data = pickle.load(file)
     return data
+
+
+
+# def load_model():
+#     with open('Dementia_XGBModel_Packed_ver2.pkl','rb') as file:
+#         data=pickle.load(file)
+#     return data
 
 data=load_model()
 
