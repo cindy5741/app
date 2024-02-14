@@ -1,6 +1,0 @@
-1.分布圖最後的畫法跟老師確定好了，兩個版本給黃醫生挑，就先麻煩妳先都放上去。我有給一個示範的jupyter檔案，妳看看怎麼微調成streamlit裡面能用這樣。主要是資料positive 跟 negative的 likelihood用附在裡面的那兩個csv(兩個CSV檔案裡面column名稱都是positive是正常的，認CSV檔案名稱就好)
-
-2. Model的部分是調整過的妳掛上去再幫我確認一下都是0應該預測結果就是negative。 (Note:分布圖要用CSV的資料不要用新model直接產生)
-
-3.搭配圖形的關係，我們Threshold就用0.32，我有包進pkl妳可以直接呼叫。
-
