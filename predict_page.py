@@ -67,13 +67,13 @@ def show_predict_page():
     CHOLESTEROL_normal={0,1}
     GPT_normal={0,1}
     eGFR_normal={0,1}
-    # T4_normal={"Normal","High","Low"}
-    # TSH_normal={"Normal","High","Low"}
+    # T4_normal={"Normal":0,"High":1,"Low":2}
+    # TSH_normal={"Normal":0,"High":1,"Low":2}
     # BUN_normal={"Normal","High"}
-    # K_normal={"Normal","High","Low"}
-    # CHOLESTEROL_normal={"Normal","High"}
-    # GPT_normal={"Normal","High"}
-    # eGFR_normal={"Normal","Low"}
+    # K_normal={"Normal":0,"High":1,"Low":2}
+    # CHOLESTEROL_normal={"Normal":0,"High":1}
+    # GPT_normal={"Normal":0,"High":1}
+    # eGFR_normal={"Normal":0,"Low":1}
     hsex=st.sidebar.selectbox("HSEX (0=Male, 1=Female)",HSEX)
     memory=st.sidebar.selectbox("Memory (CDR)",Memory)
     community_affairsl=st.sidebar.selectbox("Community_Affairsl (CDR)",Community_Affairsl)
@@ -86,7 +86,7 @@ def show_predict_page():
     mmse_attention_and_calculation=st.sidebar.selectbox("MMSE_Attention_and_calculation",MMSE_Attention_and_calculation)
     t4_normal=st.sidebar.selectbox("T4_normal (0=Normal, 1=High, 2=Low)",T4_normal)
     tsh_normal=st.sidebar.selectbox("TSH_normal (0=Normal, 1=High, 2=Low)",TSH_normal)
-    bun_normal=st.sidebar.selectbox("BUN_normal (0=Normal, 1=High, 2=Low)",BUN_normal)
+    bun_normal=st.sidebar.selectbox("BUN_normal (0=Normal, 1=High)",BUN_normal)
     k_normal=st.sidebar.selectbox("K_normal (0=Normal, 1=High, 2=Low)",K_normal)
     cholesterol_normal=st.sidebar.selectbox("CHOLESTEROL_normal (0=Normal, 1=High)",CHOLESTEROL_normal)
     gpt_normal=st.sidebar.selectbox("GPT_normal (0=Normal, 1=High)",GPT_normal)
