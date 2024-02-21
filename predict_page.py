@@ -12,7 +12,7 @@ import seaborn as sns
 from scipy.stats import gaussian_kde
 import plotly.figure_factory as ff
 import plotly.express as px
-
+from collections import OrderedDict
 
 import os
 
@@ -51,9 +51,9 @@ def show_predict_page():
 
     # HSEX={"Male","Female"}
     HSEX={0,1}
-    Memory={0,0.5,1,2,3}
-    Community_Affairsl={0,0.5,1,2,3}
-    Personal_Care={0,0.5,1,2,3}
+    Memory=OrderedDict([(0, 0), (0.5, 0.5), (1, 1), (2, 2), (3, 3)])
+    Community_Affairsl=OrderedDict([(0, 0), (0.5, 0.5), (1, 1), (2, 2), (3, 3)])
+    Personal_Care=OrderedDict([(0, 0), (0.5, 0.5), (1, 1), (2, 2), (3, 3)])
     MMSE_time={0,1,2,3,4,5}
     MMSE_place={0,1,2,3,4,5}
     MMSE_Recall={0,1,2,3}
