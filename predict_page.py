@@ -51,9 +51,9 @@ def show_predict_page():
 
     # HSEX={"Male","Female"}
     HSEX={0,1}
-    Memory={0,1,2}
-    Community_Affairsl={0,1,2,3}
-    Personal_Care={0,1,2,3}
+    Memory={0.5,1,2,3}
+    Community_Affairsl={0.5,1,2,3}
+    Personal_Care={0.5,1,2,3}
     MMSE_time={0,1,2,3,4,5}
     MMSE_place={0,1,2,3,4,5}
     MMSE_Recall={0,1,2,3}
@@ -84,7 +84,7 @@ def show_predict_page():
     mmse_language=st.sidebar.selectbox("MMSE_Language",MMSE_Language)
     mmse_registration=st.sidebar.selectbox("MMSE_Registration",MMSE_Registration)
     mmse_attention_and_calculation=st.sidebar.selectbox("MMSE_Attention_and_calculation",MMSE_Attention_and_calculation)
-    t4_normal=st.sidebar.selectbox("T4_normal",T4_normal)
+    t4_normal=st.sidebar.selectbox("T4_normal (0=Normal, 1=High, 2=Low)",T4_normal)
     tsh_normal=st.sidebar.selectbox("TSH_normal",TSH_normal)
     bun_normal=st.sidebar.selectbox("BUN_normal",BUN_normal)
     k_normal=st.sidebar.selectbox("K_normal",K_normal)
