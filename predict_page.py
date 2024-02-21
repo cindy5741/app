@@ -85,12 +85,12 @@ def show_predict_page():
     mmse_registration=st.sidebar.selectbox("MMSE_Registration",MMSE_Registration)
     mmse_attention_and_calculation=st.sidebar.selectbox("MMSE_Attention_and_calculation",MMSE_Attention_and_calculation)
     t4_normal=st.sidebar.selectbox("T4_normal (0=Normal, 1=High, 2=Low)",T4_normal)
-    tsh_normal=st.sidebar.selectbox("TSH_normal",TSH_normal)
-    bun_normal=st.sidebar.selectbox("BUN_normal",BUN_normal)
-    k_normal=st.sidebar.selectbox("K_normal",K_normal)
-    cholesterol_normal=st.sidebar.selectbox("CHOLESTEROL_normal",CHOLESTEROL_normal)
-    gpt_normal=st.sidebar.selectbox("GPT_normal",GPT_normal)
-    egfr_normal=st.sidebar.selectbox("eGFR_normal",eGFR_normal)
+    tsh_normal=st.sidebar.selectbox("TSH_normal (0=Normal, 1=High, 2=Low)",TSH_normal)
+    bun_normal=st.sidebar.selectbox("BUN_normal (0=Normal, 1=High, 2=Low)",BUN_normal)
+    k_normal=st.sidebar.selectbox("K_normal (0=Normal, 1=High, 2=Low)",K_normal)
+    cholesterol_normal=st.sidebar.selectbox("CHOLESTEROL_normal (0=Normal, 1=High)",CHOLESTEROL_normal)
+    gpt_normal=st.sidebar.selectbox("GPT_normal (0=Normal, 1=High)",GPT_normal)
+    egfr_normal=st.sidebar.selectbox("eGFR_normal (0=Normal, 1=Low)",eGFR_normal)
 
     #code for predict
     dementia=" "
