@@ -104,14 +104,14 @@ def show_predict_page():
                      ]])
        
         X=pd.DataFrame(X, columns=feature_name)
-        st.write("Prediction Outcome: ")
+        
         dementia=model.predict_proba(X)[:,1].round(4)
         # dementia0=model.predict_proba(X)[:,0].round(4)
         # dementia1=model.predict_proba(X)[:,1].round(4)
         # 四位
         st.write("Prediction Likelihood:")
         st.success(dementia[0])
-
+        st.write("Prediction Outcome: ")
         if (dementia<TH):
             
             st.success('Negative') 
