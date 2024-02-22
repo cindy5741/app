@@ -186,7 +186,7 @@ def show_predict_page():
         sns.set(style='darkgrid')
 
         # 创建 Matplotlib 图形对象
-        fig, ax = plt.subplots(figsize=(20, 12), dpi=600)
+        fig, ax = plt.subplots(figsize=(20, 10), dpi=600)
         plt.xlim(0,1)
         # plt.ylim(-0.05,1.05)
         
