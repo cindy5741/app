@@ -110,7 +110,7 @@ def show_predict_page():
         # dementia1=model.predict_proba(X)[:,1].round(4)
         # 四位
         st.write("Prediction Likelihood:")
-        st.success(dementia[0])
+        st.success(dementia[0],"")
 
         st.write("Threshold: 0.32")
 
