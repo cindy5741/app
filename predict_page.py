@@ -84,13 +84,13 @@ def show_predict_page():
     mmse_language=st.sidebar.selectbox("MMSE_Language",MMSE_Language)
     mmse_registration=st.sidebar.selectbox("MMSE_Registration",MMSE_Registration)
     mmse_attention_and_calculation=st.sidebar.selectbox("MMSE_Attention_and_calculation",MMSE_Attention_and_calculation)
-    t4_normal=st.sidebar.selectbox("T4_normal (0=Normal, 1=High, 2=Low)",T4_normal)
-    tsh_normal=st.sidebar.selectbox("TSH_normal (0=Normal, 1=High, 2=Low)",TSH_normal)
-    bun_normal=st.sidebar.selectbox("BUN_normal (0=Normal, 1=High)",BUN_normal)
-    k_normal=st.sidebar.selectbox("K_normal (0=Normal, 1=High, 2=Low)",K_normal)
-    cholesterol_normal=st.sidebar.selectbox("CHOLESTEROL_normal (0=Normal, 1=High)",CHOLESTEROL_normal)
-    gpt_normal=st.sidebar.selectbox("GPT_normal (0=Normal, 1=High)",GPT_normal)
-    egfr_normal=st.sidebar.selectbox("eGFR_normal (0=Normal, 1=Low)",eGFR_normal)
+    t4_normal=st.sidebar.selectbox("T4 (0=Normal, 1=High, 2=Low)",T4_normal)
+    tsh_normal=st.sidebar.selectbox("TSH (0=Normal, 1=High, 2=Low)",TSH_normal)
+    bun_normal=st.sidebar.selectbox("BUN (0=Normal, 1=High)",BUN_normal)
+    k_normal=st.sidebar.selectbox("K (0=Normal, 1=High, 2=Low)",K_normal)
+    cholesterol_normal=st.sidebar.selectbox("CHOLESTEROL (0=Normal, 1=High)",CHOLESTEROL_normal)
+    gpt_normal=st.sidebar.selectbox("GPT (0=Normal, 1=High)",GPT_normal)
+    egfr_normal=st.sidebar.selectbox("eGFR (0=Normal, 1=Low)",eGFR_normal)
 
     #code for predict
     dementia=" "
@@ -109,6 +109,9 @@ def show_predict_page():
         # dementia0=model.predict_proba(X)[:,0].round(4)
         # dementia1=model.predict_proba(X)[:,1].round(4)
         # 四位
+        st.write("Prediction Likelihood:")
+        st.success(dementia[0])
+
         if (dementia<TH):
             
             st.success('Negative') 
@@ -116,8 +119,7 @@ def show_predict_page():
             
             st.success('Positive') 
             
-        st.write("Prediction Likelihood:")
-        st.success(dementia[0])
+        
         # st.success(dementia0)
         # st.success(dementia1)
         
