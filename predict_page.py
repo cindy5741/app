@@ -111,7 +111,10 @@ def show_predict_page():
         # 四位
         st.write("Prediction Likelihood:")
         st.success(dementia[0])
-        st.write("Prediction Outcome: ")
+
+        st.write("Threshold: 0.32")
+
+        st.write("No progression of dementia: ")
         if (dementia<TH):
             
             st.success('Negative') 
