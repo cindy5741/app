@@ -168,7 +168,7 @@ def show_predict_page():
         # ax.scatter(dementia,densityData,label='Prediction',color='red', alpha=1)  # 資料散佈點
         ax.scatter(dementia,p_densityData,color='red', alpha=1)  # 資料散佈點
         ax.axvline(x=TH, color='black', linestyle='--', label='Threshold: 0.32')  # 紅色虛線
-        ax.axvline(x=dementia, color='red', linestyle='--', label='pred_TH')  # 紅色虛線
+        ax.axvline(x=dementia, color='red', linestyle='--')  # 紅色虛線
         # ax.axvline(x=0.3209773, color='red', linestyle='--', label='TH')  # 紅色虛線
 
         # 加入標籤和標題
