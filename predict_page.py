@@ -187,7 +187,8 @@ def show_predict_page():
 
         # 创建 Matplotlib 图形对象
         fig, ax = plt.subplots(figsize=(20, 12), dpi=600)
-
+        plt.xlim(0,1)
+        # plt.ylim(-0.05,1.05)
         
         # 绘制正类别的直方图和 KDE 曲线
         sns.histplot(x=p_data, color='red', kde=True, stat='probability', label='Positive likelihood')
