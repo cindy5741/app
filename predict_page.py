@@ -174,7 +174,7 @@ def show_predict_page():
         # 加入標籤和標題
         ax.set_xlabel('Likelihood')
         ax.set_ylabel('Density')
-        ax.set_title('Probability distribution of the trained model')
+        # ax.set_title('Probability distribution of the trained model')
 
         # 顯示圖例
         ax.legend()
