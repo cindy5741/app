@@ -165,15 +165,12 @@ def show_predict_page():
 
         p_densityData = p_kde(dementia)
         
-        
-        
-        
         # ax.scatter(dementia,densityData,label='Prediction',color='red', alpha=1)  # 資料散佈點
         ax.scatter(dementia,p_densityData,color='red', alpha=1)  # 資料散佈點
         ax.axvline(x=TH, color='black', linestyle='--', label='Threshold: 0.32')  # 紅色虛線
         ax.axvline(x=dementia, color='red', linestyle='--')  # 紅色虛線
         # ax.axvline(x=0.3209773, color='red', linestyle='--', label='TH')  # 紅色虛線
-
+        ax.set_xlim(0, 1)
         # 加入標籤和標題
         ax.set_xlabel('Likelihood')
         ax.set_ylabel('Density')
@@ -185,30 +182,6 @@ def show_predict_page():
         # 顯示 KDE 圖
         st.pyplot(fig)
         
-        # 设置 Seaborn 样式
-        sns.set(style='darkgrid')
-
-        # 创建 Matplotlib 图形对象
-        fig, ax = plt.subplots(figsize=(20, 10), dpi=600)
-        plt.xlim(0,1)
-        # plt.ylim(-0.05,1.05)
-        
-        # 绘制正类别的直方图和 KDE 曲线
-        sns.histplot(x=p_data, color='red', kde=True, stat='probability', label='Positive likelihood')
-        # sns.lineplot(x=p_x, y=p_density, color='blue', label='KDE for Positive')
-
-        # 绘制负类别的直方图和 KDE 曲线
-        sns.histplot(x=n_data, color='blue', kde=True, stat='probability', label='Negative likelihood')
-        # sns.lineplot(x=n_x, y=density, color='green', label='KDE for Negative')
-
-        # 轴标签
-        plt.xlabel('Predicted Likelihood', fontsize=18)
-        plt.ylabel('Probability', fontsize=18)
-        plt.legend(fontsize=16)
-
-        # 显示图形
-        # st.pyplot(fig)
-
 
 
 show_predict_page()
