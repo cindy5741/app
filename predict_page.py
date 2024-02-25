@@ -76,7 +76,7 @@ def show_predict_page():
     # eGFR_normal={"Normal":0,"Low":1}
     hsex=st.sidebar.selectbox("Sex (0=Male, 1=Female)",HSEX)
     memory=st.sidebar.selectbox("Memory (CDR)",Memory)
-    community_affairsl=st.sidebar.selectbox("Community affairsl (CDR)",Community_Affairsl)
+    community_affairsl=st.sidebar.selectbox("Community affairs (CDR)",Community_Affairsl)
     personal_care=st.sidebar.selectbox("Personal care (CDR)",Personal_Care)
     mmse_time=st.sidebar.selectbox("MMSE time",MMSE_time)
     mmse_place=st.sidebar.selectbox("MMSE place",MMSE_place)
