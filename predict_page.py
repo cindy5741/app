@@ -74,21 +74,21 @@ def show_predict_page():
     # CHOLESTEROL_normal={"Normal":0,"High":1}
     # GPT_normal={"Normal":0,"High":1}
     # eGFR_normal={"Normal":0,"Low":1}
-    hsex=st.sidebar.selectbox("HSEX (0=Male, 1=Female)",HSEX)
+    hsex=st.sidebar.selectbox("Sex (0=Male, 1=Female)",HSEX)
     memory=st.sidebar.selectbox("Memory (CDR)",Memory)
-    community_affairsl=st.sidebar.selectbox("Community_Affairsl (CDR)",Community_Affairsl)
-    personal_care=st.sidebar.selectbox("Personal_Care (CDR)",Personal_Care)
-    mmse_time=st.sidebar.selectbox("MMSE_time",MMSE_time)
-    mmse_place=st.sidebar.selectbox("MMSE_place",MMSE_place)
-    mmse_recall=st.sidebar.selectbox("MMSE_Recall", MMSE_Recall)
-    mmse_language=st.sidebar.selectbox("MMSE_Language",MMSE_Language)
-    mmse_registration=st.sidebar.selectbox("MMSE_Registration",MMSE_Registration)
-    mmse_attention_and_calculation=st.sidebar.selectbox("MMSE_Attention_and_calculation",MMSE_Attention_and_calculation)
+    community_affairsl=st.sidebar.selectbox("Community Affairsl (CDR)",Community_Affairsl)
+    personal_care=st.sidebar.selectbox("Personal Care (CDR)",Personal_Care)
+    mmse_time=st.sidebar.selectbox("MMSE time",MMSE_time)
+    mmse_place=st.sidebar.selectbox("MMSE place",MMSE_place)
+    mmse_recall=st.sidebar.selectbox("MMSE Recall", MMSE_Recall)
+    mmse_language=st.sidebar.selectbox("MMSE Language",MMSE_Language)
+    mmse_registration=st.sidebar.selectbox("MMSE Registration",MMSE_Registration)
+    mmse_attention_and_calculation=st.sidebar.selectbox("MMSE Attention and calculation",MMSE_Attention_and_calculation)
     t4_normal=st.sidebar.selectbox("T4 (0=Normal, 1=High, 2=Low)",T4_normal)
     tsh_normal=st.sidebar.selectbox("TSH (0=Normal, 1=High, 2=Low)",TSH_normal)
     bun_normal=st.sidebar.selectbox("BUN (0=Normal, 1=High)",BUN_normal)
     k_normal=st.sidebar.selectbox("K (0=Normal, 1=High, 2=Low)",K_normal)
-    cholesterol_normal=st.sidebar.selectbox("CHOLESTEROL (0=Normal, 1=High)",CHOLESTEROL_normal)
+    cholesterol_normal=st.sidebar.selectbox("Cholesterol (0=Normal, 1=High)",CHOLESTEROL_normal)
     gpt_normal=st.sidebar.selectbox("GPT (0=Normal, 1=High)",GPT_normal)
     egfr_normal=st.sidebar.selectbox("eGFR (0=Normal, 1=Low)",eGFR_normal)
 
@@ -96,6 +96,7 @@ def show_predict_page():
     dementia=" "
 
     ok=st.sidebar.button("Predict")
+    st.sidebar.write("""Category variables in our prediction training model were classified according to the reference values in Fu Jen Catholic University Hospital, as demonstrated in Supplement Table 1. Users can enter category variables data based on their medical units' recommendations and clinical judgment.""")
     if ok:
         X=np.array([[mmse_time,mmse_place,egfr_normal,mmse_recall,t4_normal,
                      mmse_attention_and_calculation,personal_care,memory,mmse_language,tsh_normal,
@@ -114,7 +115,7 @@ def show_predict_page():
 
         # st.write("Threshold: 0.32")
 
-        st.write("No progression of dementia: ")
+        st.write("Predict Progression of Dementia: ")
         if (dementia<TH):
             
             st.success('Negative') 
