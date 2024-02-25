@@ -96,7 +96,8 @@ def show_predict_page():
     dementia=" "
 
     ok=st.sidebar.button("Predict")
-    st.sidebar.markdown("<p style='font-size: 12px;'>Category variables in our prediction training model were classified according to the reference values in Fu Jen Catholic University Hospital, as demonstrated in Supplement Table 1. Users can enter category variables data based on their medical units' recommendations and clinical judgment.</p>", unsafe_allow_html=True)
+    st.sidebar.write("Category variables in our prediction training model were classified according to the reference values in Fu Jen Catholic University Hospital, as demonstrated in Supplement Table 1. Users can enter category variables data based on their medical units' recommendations and clinical judgment.")
+    # st.sidebar.markdown("<p style='font-size: 12px;'>Category variables in our prediction training model were classified according to the reference values in Fu Jen Catholic University Hospital, as demonstrated in Supplement Table 1. Users can enter category variables data based on their medical units' recommendations and clinical judgment.</p>", unsafe_allow_html=True)
     if ok:
         X=np.array([[mmse_time,mmse_place,egfr_normal,mmse_recall,t4_normal,
                      mmse_attention_and_calculation,personal_care,memory,mmse_language,tsh_normal,
