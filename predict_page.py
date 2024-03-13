@@ -48,7 +48,6 @@ feature_name=data['Feature_labels']
 def show_predict_page():
     st.title("Prediction Result")
     st.sidebar.markdown('<b style="font-size:28px; ">Machine Learning Prediction Model for Dementia Progression with Multiple Integrated Data</b>', unsafe_allow_html=True)
-    st.markdown('<b style="font-size:28px; ">Machine Learning Prediction Model for Dementia Progression with Multiple Integrated Data</b>', unsafe_allow_html=True)
     st.sidebar.write("""### Input your data""")
 
     # HSEX={"Male","Female"}
